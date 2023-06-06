@@ -11,6 +11,7 @@ jobs:
       - name: Login to docker hub
         uses: docker/login-action@v2.1.0
         with:
+          registry: https://hub.docker.com/r/mahlomojats
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
